@@ -18,7 +18,7 @@ Hardware: Google Colab T4
 | Model Type | Discrete | Average Reward| Training Time | Total Training Steps |
 |------------|----------|---------------|---------------|----------------------|
 | PPO        | No       | 347.60        |  1:32:55      | 80,000               |
-| SAC        | No       |               |               |                      |
+| SAC        | No       | -21.16        |  3:12:53      | 100,000              |
 | DQN        | Yes      |               |               |                      |
 
 ## Finding Theta Blog Posts:
