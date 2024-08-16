@@ -21,5 +21,9 @@ Hardware: Google Colab T4
 | SAC        | No       | -21.16        |  3:12:53      | 100,000              |
 | DQN        | Yes      |               |               |                      |
 
+## Training Note
+- Set ent_coef for PPO as it encourages exploration of other actions. Stable Baseline3 defaults the value to 0.0.
+- Do not set your eval_freq too low, as it can sometimes cause instability, as the evaluation might interrupt the learning process. Try increasing the eval_freq to a higher value (e.g., 10,000) to reduce the potential disturbance to learning.
+
 ## Finding Theta Blog Posts:
  - [Solving Gymnasium's Car Racing with Reinforcement Learning](https://www.findingtheta.com/blog/solving-gymnasiums-car-racing-with-reinforcement-learning)
