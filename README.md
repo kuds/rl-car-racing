@@ -17,9 +17,9 @@ Hardware: Google Colab T4 High-RAM
 
 | Model Type | Discrete | Average Reward| Training Time | Total Training Steps |
 |------------|----------|---------------|---------------|----------------------|
-| PPO        | No       | 441.05        |  4:01:09      | 329,994              |
+| PPO        | No       | 766.83        |  3:39:20      | 399,999              |
 | SAC        | No       | -21.16        |  3:12:53      | 100,000              |
-| DQN        | Yes      |               |               |                      |
+| DQN        | Yes      | 811.63        |  4:23:17      | 501,234              | 
 
 ## Training Note
 - Set `ent_coef` for PPO as it encourages exploration of other actions. Stable Baseline3 defaults the value to 0.0. [More Information](https://www.youtube.com/watch?v=1ppslywmIPs)
