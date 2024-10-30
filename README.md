@@ -18,7 +18,7 @@ Hardware: Google Colab T4 High-RAM
 | Model Type | Discrete | Average Reward| Training Time | Total Training Steps |
 |------------|----------|---------------|---------------|----------------------|
 | PPO        | No       | 809.98        |  3:39:20      | 751,615              |
-| SAC        | No       | -21.16        |  3:12:53      | 100,000              |
+| SAC        | No       | -20.23        |  1:59:49      | 100,000              |
 | DQN        | Yes      | 897.77        |  5:41:22      | 750,000              | 
 
 ## Training Notes
