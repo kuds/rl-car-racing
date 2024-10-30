@@ -13,12 +13,12 @@
 ![](/Images/ppo_car_racing.gif)
 
 ## Results
-Hardware: Google Colab T4 High-RAM
+Hardware: Google Colab T4
 
 | Model Type | Discrete | Average Reward| Training Time | Total Training Steps |
 |------------|----------|---------------|---------------|----------------------|
 | PPO        | No       | 809.98        |  3:39:20      | 751,615              |
-| SAC        | No       | -20.23        |  1:59:49      | 100,000              |
+| SAC        | No       | 610.67        |  6:29:16      | 333,116              |
 | DQN        | Yes      | 897.77        |  5:41:22      | 750,000              | 
 
 ## Training Notes
