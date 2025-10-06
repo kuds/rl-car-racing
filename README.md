@@ -15,11 +15,11 @@
 ## Results
 Hardware: Google Colab T4
 
-| Model Type | Discrete | Average Reward| Training Time | Total Training Steps |
-|------------|----------|---------------|---------------|----------------------|
-| PPO        | No       | 887.84        |  5:33:03      | 751,614              |
-| SAC        | No       | 610.67        |  6:29:16      | 333,116              |
-| DQN        | Yes      | 897.77        |  5:41:22      | 750,000              | 
+| Model Type | Discrete | Average Reward| Training Time | Total Training Steps | HuggingFace                                        |
+|------------|----------|---------------|---------------|----------------------|----------------------------------------------------|
+| PPO        | No       | 887.84        |  5:33:03      | 751,614              | [Link](https://huggingface.co/kuds/car-racing-ppo) | 
+| SAC        | No       | 610.67        |  6:29:16      | 333,116              | [Link](https://huggingface.co/kuds/car-racing-sac) | 
+| DQN        | Yes      | 897.77        |  5:41:22      | 750,000              | [Link](https://huggingface.co/kuds/car-racing-dqn) |
 
 ## Training Notes
 - Set `ent_coef` for PPO as it encourages exploration of other actions. Stable Baselines3 defaults the value to 0.0. [More Information](https://www.youtube.com/watch?v=1ppslywmIPs)
