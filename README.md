@@ -13,7 +13,7 @@
 ![](/Images/ppo_car_racing.gif)
 
 ## Results
-Hardware: Google Colab T4
+Hardware: Google Colab L4
 
 | Model Type | Discrete | Average Reward| Training Time | Total Training Steps | HuggingFace                                        |
 |------------|----------|---------------|---------------|----------------------|----------------------------------------------------|
