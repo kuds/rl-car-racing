@@ -1,3 +1,15 @@
-
+# macOS
 .DS_Store
-Images/ppo_car_rac.mp4
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Training artifacts
+logs/
+videos/
+*.mp4
