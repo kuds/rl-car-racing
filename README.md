@@ -20,12 +20,14 @@ Hardware: Google Colab L4
 | PPO        | No       | 887.84        |  5:33:03      | 751,614              | [Link](https://huggingface.co/kuds/car-racing-ppo) | 
 | SAC        | No       | 787.69        |  6:29:16      | 750,000              | [Link](https://huggingface.co/kuds/car-racing-sac) | 
 | DQN        | Yes      | 897.77        |  5:41:22      | 750,000              | [Link](https://huggingface.co/kuds/car-racing-dqn) |
+| Dreamer    | No       | TBD           |  TBD          | 400,000              | TBD                                                |
 
 ## Training Notes
 - Set `ent_coef` for PPO as it encourages exploration of other actions. Stable Baselines3 defaults the value to 0.0. [More Information](https://www.youtube.com/watch?v=1ppslywmIPs)
 - Do not set your `eval_freq` too low, as it can sometimes cause instability during learning due to being interrupted by evaluation. (e.g. >=10,000)
 - `buffer_size` defaults to 1,000,000, which requires a significant memory for DQN and SAC. Try setting it to a more practical value when using the original observation space (e.g., 200,000)
 - Set the `gray_scale` flag in the notebooks to `True` to allow DQN and SAC to run without using the High-RAM option in Google Colab (buffer size <= 150,000). This converts the observation space from (96 x 96 x 3) images to (84 x 84) grayscale images.
+- The Dreamer notebook learns a latent world model (RSSM with a GRU + Gaussian stochastic state) and trains the actor/critic entirely inside imagined rollouts. Tuning knobs: `seq_len` and `horizon` control the sequence length sampled from the buffer and the imagination horizon `H`; `kl_free_bits` (default `1.0` nat) prevents posterior collapse; rewards and value targets are passed through `symlog` so the heads don't have to fit a wide dynamic range. The notebook stores complete episodes in a sequence-keyed replay buffer rather than per-step transitions, since dynamics learning needs contiguous trajectories. Reported numbers above are placeholders pending a full training run on hardware. Discrete categorical latents (DreamerV3) are deliberately left out for simplicity — they are the most impactful follow-up to try.
 
 ## Finding Theta Blog Posts
  - [Solving Gymnasium's Car Racing with Reinforcement Learning](https://www.findingtheta.com/blog/solving-gymnasiums-car-racing-with-reinforcement-learning)
